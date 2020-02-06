@@ -74,10 +74,47 @@ public class Exercises {
 	}
 
 	public double biggest(ArrayList<Double> numbers) {
-		// write your code here
+
+	if (numbers == null || numbers.size() < 3 || numbers.size() % 2 == 0) {
 
 		return -1;		// default return value to ensure compilation
+
 	}
+
+	for (int i = 0; i < numbers.size(); i++){
+
+		if (numbers.get(i) < 0) {
+
+			return -1;
+
+		}
+	}
+
+	double firstDigit = numbers(0);
+	double middleDigit = numbers.get(numbers.size() - 1);
+	double lastDigit = numbers.get(numbers.size() / 2);
+
+	if (firstDigit > lastDigit && firstDigit > middleDigit) {
+
+		return firstDigit;
+
+	} else if (lastDigit > middleDigit && lastDigit > firstDigit) {
+
+		return lastDigit;
+
+	} else if (middleDigit > lastDigit && middleDigit > firstDigit) {
+
+		return middleDigit;
+
+	} else if (middleDigit == lastDigit && middleDigit == firstDigit) {
+
+		return firstDigit;
+
+	}
+
+	return -1;
+	
+}
 
 	public ArrayList<String> middle(ArrayList<String> values) {
 		// write your code here
