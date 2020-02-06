@@ -39,6 +39,8 @@ public class Exercises {
 
 		}
 
+		return combinedArrayList;
+
 		return null;	// default return value to ensure compilation
 
 	}
