@@ -127,9 +127,36 @@ public class Exercises {
 // Exercise 5 //
 
 	public ArrayList<String> middle(ArrayList<String> values) {
-		// write your code here
 
-		return null;	// default return value to ensure compilation
+		ArrayList<String> empty = new ArrayList();
+
+		if (words.isEmpty() || words == null) {
+
+			return empty;
+
+		} else if (words.size() < 3 || words.size() % 2 == 0) {
+
+			return empty;
+
+		}
+
+		for (int i = 0; i < words.size(); i++) {
+
+			if ((words.get(i) == null) ? true : false) {
+
+				return empty;
+
+			}
+		}
+
+		ArrayList<String> outputArrayList = new ArrayList();
+
+		outputArrayList.add(words.get((int) Math.floor(words.size() / 2) - 1));
+		outputArrayList.add(words.get((int) Math.floor(words.size() / 2)));
+		outputArrayList.add(words.get((int) Math.floor(words.size() / 2) + 1));
+
+		return outputArrayList;
+		
 	}
 
 // Exercise 6 //
