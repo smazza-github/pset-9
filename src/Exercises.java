@@ -41,8 +41,6 @@ public class Exercises {
 
 		return combinedArrayList;
 
-		return null;	// default return value to ensure compilation
-
 	}
 
 	public int difference(ArrayList<Integer> numbers) {
@@ -53,7 +51,7 @@ public class Exercises {
 
 		}
 
-		int smallestValue = number.get(0);
+		int smallestValue = numbers.get(0);
 		int largestValue =  numbers.get(0);
 
 		for (int i = 0; i < numbers.size(); i++) {
