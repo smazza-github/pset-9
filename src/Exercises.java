@@ -332,8 +332,51 @@ public class Exercises {
 // Exercise 10 //
 
 	public int clumps(ArrayList<String> values) {
-		// write your code here
 
-		return -1;		// default return value to ensure compilation
-	}
-}
+		if (values == null) {
+
+			return -1;
+
+		}
+
+			for (int i = 0; i < values.size(); i++) {
+
+				if (values.get(i) == null) {
+
+					return -1;
+
+				}
+			}
+
+			boolean equal = false;
+			boolean prevEqual = false;
+
+			String before = "";
+			int clumps = 0;
+
+			for (int i = 0; i < values.size(); i++) {
+
+				if (before.equals(values.get(i))) {
+
+					equal = true;
+
+					if (prevEqual != true) {
+
+						clumps++;
+
+					 }
+					} else {
+
+						equal = false;
+		
+					}
+
+					before = values.get(i);
+					prevEqual = equal;
+
+				}
+
+				return clumps;
+
+			}
+		}
