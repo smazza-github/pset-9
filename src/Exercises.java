@@ -236,9 +236,58 @@ public class Exercises {
 // Exercise 8 //
 
 	public boolean consecutive(ArrayList<Integer> numbers) {
-		// write your code here
+
+		if (numbers.size() < 3 || numbers == null) {
+
+			return false;
+
+		}
+
+  	int digitsInRow = 0;
+		int remainder1 = -1;
+		int remainder2 = -1;
+
+		for (int i = 0; i < numbers.size(); i++) {
+
+			remainder1 = numbers.get(i) % 2;
+
+			if (remainder1 == 1) {
+
+				if (remainder2 == 1) {
+
+					digitsInRow++;
+
+			 	} else {
+
+					digitsInRow = 1;
+
+				}
+
+			} else {
+
+				if (remainder2 == 0) {
+
+					digitsInRow ++;
+
+				} else {
+
+					digitsInRow = 1;
+
+				}
+			}
+
+			if (digitsInRow == 3) {
+
+				return true;
+
+			}
+
+			remainder2 = remainder1;
+
+		}
 
 		return false;	// default return value to ensure compilation
+
 	}
 
 // Exercise 9 //
