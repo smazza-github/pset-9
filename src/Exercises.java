@@ -199,9 +199,9 @@ public class Exercises {
 		int gap = 0;
 		boolean lastPosition = false;
 
-		for (int i = 0; i < number.size(); i++) {
+		for (int i = 0; i < numbers.size(); i++) {
 
-			if (number.get(i) == x) {
+			if (numbers.get(i) == x) {
 
 				gap = 0;
 				lastPosition = true;
@@ -230,7 +230,7 @@ public class Exercises {
 			}
 
 		return true;
-		
+
 	}
 
 // Exercise 8 //
