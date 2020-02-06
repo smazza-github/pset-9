@@ -25,7 +25,7 @@ public class Exercises {
 
 		ArrayList<String> emptyArrayList = new ArrayList();
 
-		if (values == null || values.isEmpty() || values.size() < n || n < 0 ) {
+		if (values.size() < n || values == null || n < 0 || values.isEmpty()) {
 
 			return emptyArrayList;
 
@@ -35,9 +35,12 @@ public class Exercises {
 
 		int nValue = n;
 
-		for (int i = n; i < n * 2; i++) {
+		for (int i = 0; i < n; i++) {
+			combinedArrayList.add(values.get(i));
+		}
 
-			combinedArrayList.add(values.get(values.size() - nValue ));
+		for (int i = n; i < n * 2; i++) {
+			combinedArrayList.add(values.get(values.size() - nValue));
 
 			nValue--;
 
@@ -51,31 +54,31 @@ public class Exercises {
 
 	public int difference(ArrayList<Integer> numbers) {
 
-		if (numbers.isEmpty() || numbers == null || numbers.size() < 1) {
+		if (numbers.size() < 1 || numbers == null) {
 
-			return -1;
+		return -1;		// default return value to ensure compilation
 
-		}
+	}
 
 		int smallestValue = numbers.get(0);
-		int largestValue =  numbers.get(0);
+		int largestValue = numbers.get(0);
 
 		for (int i = 0; i < numbers.size(); i++) {
-
-			if (numbers.get(i) < smallestValue) {
-
-				smallestValue = numbers.get(i);
-
-			}
 
 			if (numbers.get(i) > largestValue) {
 
 				largestValue = numbers.get(i);
 
 			}
+
+			if (numbers.get(i) < smallestValue) {
+
+				smallestValue = numbers.get(i);
+
+			}
 		}
 
-		return largestValue - smallestValue;
+	return largestValue - smallestValue;
 
 	}
 
@@ -98,7 +101,7 @@ public class Exercises {
 		}
 	}
 
-	double firstDigit = numbers(0);
+	double firstDigit = numbers.get(0);
 	double middleDigit = numbers.get(numbers.size() - 1);
 	double lastDigit = numbers.get(numbers.size() / 2);
 
@@ -126,7 +129,7 @@ public class Exercises {
 
 // Exercise 5 //
 
-	public ArrayList<String> middle(ArrayList<String> values) {
+	public ArrayList<String> middle(ArrayList<String> words) {
 
 		ArrayList<String> empty = new ArrayList();
 
@@ -190,7 +193,7 @@ public class Exercises {
 
 	public boolean everywhere(ArrayList<Integer> numbers, int x) {
 
-		if (number == null || numbers.size() < 1) {
+		if (numbers == null || numbers.size() < 1) {
 
 			return false;
 
@@ -368,7 +371,7 @@ public class Exercises {
 					} else {
 
 						equal = false;
-		
+
 					}
 
 					before = values.get(i);
