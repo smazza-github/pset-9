@@ -293,10 +293,41 @@ public class Exercises {
 // Exercise 9 //
 
 	public boolean balance(ArrayList<Integer> numbers) {
-		// write your code here
 
-		return false;	// default return value to ensure compilation
+
+		if (numbers == null || numbers.size() < 2) {
+
+			return false;
+
+		}
+
+		for (int i = 0; i < numbers.size() - 1; i++) {
+
+	 	int halfSum1 = 0;
+		int halfSum2 = 0;
+
+		for (int x = i; x >= 0; x--){
+
+			halfSum1 += numbers.get(x);
+
+		}
+
+		for (int z = i + 1; z < numbers.size(); z++) {
+
+			halfSum2 += numbers.get(z);
+
+		}
+
+		if (halfSum1 == halfSum2) {
+
+			return true;
+
+		}
 	}
+
+			return false;	// default return value to ensure compilation
+
+		}
 
 // Exercise 10 //
 
