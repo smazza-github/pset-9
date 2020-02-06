@@ -156,15 +156,34 @@ public class Exercises {
 		outputArrayList.add(words.get((int) Math.floor(words.size() / 2) + 1));
 
 		return outputArrayList;
-		
+
 	}
 
 // Exercise 6 //
 
 	public boolean increasing(ArrayList<Integer> numbers) {
-		// write your code here
+
+		if (numbers == null) {
+
+			return false;
+
+		} else if (numbers.size() < 1) {
+
+			return false;
+
+		}
+
+		for (int i = 1; i < numbers.size() - 1; i++) {
+
+			if (numbers.get(i-1) < numbers.get(i) && numbers.get(i) < numbers.get(i+1)) {
+
+				return true;
+
+			}
+		}
 
 		return false;	// default return value to ensure compilation
+		
 	}
 
 // Exercise 7 //
