@@ -14,13 +14,33 @@ public class Exercises {
 		}
 
 		return false;	// default return value to ensure compilation
-		
+
 	}
 
 	public ArrayList<String> endsMeet(ArrayList<String> values, int n) {
-		// write your code here
+
+		ArrayList<String> emptyArrayList = new ArrayList();
+
+		if (values == null || values.isEmpty() || values.size() < n || n < 0 ) {
+
+			return emptyArrayList;
+
+		}
+
+		ArrayList<String> combinedArrayList = new ArrayList();
+
+		int nValue = n;
+
+		for (int i = n; i < n * 2; i++) {
+
+			combinedArrayList.add(values.get(values.size() - nValue ));
+
+			nValue--;
+
+		}
 
 		return null;	// default return value to ensure compilation
+
 	}
 
 	public int difference(ArrayList<Integer> numbers) {
