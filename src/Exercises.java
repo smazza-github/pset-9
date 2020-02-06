@@ -2,6 +2,8 @@ import java.util.ArrayList;
 
 public class Exercises {
 
+// Exercise 1 //
+
 	public boolean commonEnd(ArrayList<Integer> a, ArrayList<Integer> b) {
 		if (a == null || a.isEmpty() || b == null || b.isEmpty()) {
 			return false;
@@ -16,6 +18,8 @@ public class Exercises {
 		return false;	// default return value to ensure compilation
 
 	}
+
+// Exercise 2 //
 
 	public ArrayList<String> endsMeet(ArrayList<String> values, int n) {
 
@@ -42,6 +46,8 @@ public class Exercises {
 		return combinedArrayList;
 
 	}
+
+// Exercise 3 //
 
 	public int difference(ArrayList<Integer> numbers) {
 
@@ -72,6 +78,8 @@ public class Exercises {
 		return largestValue - smallestValue;
 
 	}
+
+// Exercise 4 //
 
 	public double biggest(ArrayList<Double> numbers) {
 
@@ -113,8 +121,10 @@ public class Exercises {
 	}
 
 	return -1;
-	
+
 }
+
+// Exercise 5 //
 
 	public ArrayList<String> middle(ArrayList<String> values) {
 		// write your code here
@@ -122,11 +132,15 @@ public class Exercises {
 		return null;	// default return value to ensure compilation
 	}
 
+// Exercise 6 //
+
 	public boolean increasing(ArrayList<Integer> numbers) {
 		// write your code here
 
 		return false;	// default return value to ensure compilation
 	}
+
+// Exercise 7 //
 
 	public boolean everywhere(ArrayList<Integer> numbers, int x) {
 		// write your code here
@@ -134,17 +148,23 @@ public class Exercises {
 		return false;	// default return value to ensure compilation
 	}
 
+// Exercise 8 //
+
 	public boolean consecutive(ArrayList<Integer> numbers) {
 		// write your code here
 
 		return false;	// default return value to ensure compilation
 	}
 
+// Exercise 9 //
+
 	public boolean balance(ArrayList<Integer> numbers) {
 		// write your code here
 
 		return false;	// default return value to ensure compilation
 	}
+
+// Exercise 10 //
 
 	public int clumps(ArrayList<String> values) {
 		// write your code here
